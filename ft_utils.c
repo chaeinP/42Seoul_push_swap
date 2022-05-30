@@ -6,7 +6,7 @@
 /*   By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 14:43:48 by chaepark          #+#    #+#             */
-/*   Updated: 2022/05/30 00:38:40 by chaepark         ###   ########.fr       */
+/*   Updated: 2022/05/31 00:09:55 by chaepark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ int	ft_get_chunk(int size)
 	int	chunk;
 
 	chunk = 0.000000053 * size * size + 0.03 * size + 14.5;
+	if (chunk > size)
+		chunk = size / 3;
 	return (chunk);
 }
 
