@@ -6,7 +6,7 @@
 /*   By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 14:43:48 by chaepark          #+#    #+#             */
-/*   Updated: 2022/05/31 00:09:55 by chaepark         ###   ########.fr       */
+/*   Updated: 2022/05/31 20:54:21 by chaepark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_putstr(char *s)
 
 void	ft_print_error(void)
 {
-	ft_putstr("ERROR\n");
+	ft_putstr("Error\n");
 	exit(1);
 }
 

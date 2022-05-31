@@ -6,7 +6,7 @@
 /*   By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 14:08:09 by chaepark          #+#    #+#             */
-/*   Updated: 2022/05/31 00:10:05 by chaepark         ###   ########.fr       */
+/*   Updated: 2022/06/01 02:28:15 by chaepark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,13 +69,13 @@ static int	is_max_at_top(t_stack *stack_b, int *depth, int max)
 	}
 }
 
-static void	ft_move_b_to_a(t_stack *stack_a, t_stack *stack_b, int ac)
+static void	ft_move_b_to_a(t_stack *stack_a, t_stack *stack_b)
 {
 	int	num;
 	int	depth;
 	int	count;
 
-	num = ac - 2;
+	num = stack_b->length - 1;
 	count = stack_b->length;
 	while (count--)
 	{
@@ -110,6 +110,6 @@ int	main(int ac, char **av)
 		return (0);
 	chunk = ft_get_chunk(stack_a->length);
 	ft_move_a_to_b(stack_a, stack_b, chunk);
-	ft_move_b_to_a(stack_a, stack_b, ac);
+	ft_move_b_to_a(stack_a, stack_b);
 	return (0);
 }
