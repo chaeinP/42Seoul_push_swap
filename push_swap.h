@@ -6,7 +6,7 @@
 /*   By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 14:08:13 by chaepark          #+#    #+#             */
-/*   Updated: 2022/06/03 22:12:31 by chaepark         ###   ########.fr       */
+/*   Updated: 2022/06/03 22:29:46 by chaepark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,6 @@ void	ft_push(t_stack *from, t_stack *to, char *name);
 void	ft_swap(t_stack *stack, char *name);
 void	ft_rotate(t_stack *stack, char *name);
 void	ft_rrotate(t_stack *stack, char *name);
-void 	ft_free_stack(t_stack *stack);
+void	ft_free_stack(t_stack *stack);
 
 #endif
