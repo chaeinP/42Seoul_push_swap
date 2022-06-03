@@ -6,7 +6,7 @@
 /*   By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 14:08:09 by chaepark          #+#    #+#             */
-/*   Updated: 2022/06/01 02:28:15 by chaepark         ###   ########.fr       */
+/*   Updated: 2022/06/03 22:05:13 by chaepark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,10 +106,18 @@ int	main(int ac, char **av)
 	stack_a = ft_create_stack();
 	stack_b = ft_create_stack();
 	ft_initialize_stack_a(ac, av, &stack_a);
-	if (ft_is_sorted(stack_a))
-		return (0);
-	chunk = ft_get_chunk(stack_a->length);
-	ft_move_a_to_b(stack_a, stack_b, chunk);
-	ft_move_b_to_a(stack_a, stack_b);
+	if (!ft_is_sorted(stack_a, 0))
+	{
+		if (stack_a->length < 6)
+			ft_under_five(stack_a, stack_b);
+		else
+		{
+			chunk = ft_get_chunk(stack_a->length);
+			ft_move_a_to_b(stack_a, stack_b, chunk);
+			ft_move_b_to_a(stack_a, stack_b);
+		}
+	}
+	ft_free_stack(stack_a);
+	ft_free_stack(stack_b);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 17:55:27 by chaepark          #+#    #+#             */
-/*   Updated: 2022/05/29 21:43:54 by chaepark         ###   ########.fr       */
+/*   Updated: 2022/06/03 22:00:28 by chaepark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,9 @@ void	ft_initialize_stack_a(int ac, char **av, t_stack **stack)
 			num = ft_atoi(str[j]);
 			new = ft_create_elem(num);
 			ft_stack_add_bottom(*stack, new);
-			free(str[j]);
-			j++;
+			free(str[j++]);
 		}
 		i++;
+		free(str);
 	}
-	free(str);
 }

@@ -1,2 +1,5 @@
 .vscode
+push_swap.dSYM/**/**
 push_swap
+problem_*
+*.o

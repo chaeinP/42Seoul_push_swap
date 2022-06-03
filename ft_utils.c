@@ -6,7 +6,7 @@
 /*   By: chaepark <chaepark@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 14:43:48 by chaepark          #+#    #+#             */
-/*   Updated: 2022/05/31 20:54:21 by chaepark         ###   ########.fr       */
+/*   Updated: 2022/06/01 17:39:49 by chaepark         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,10 @@ int	ft_get_chunk(int size)
 	return (chunk);
 }
 
-int	ft_is_sorted(t_stack *stack)
+int	ft_is_sorted(t_stack *stack, int i)
 {
-	int		i;
 	t_elem	*cur;
 
-	i = 0;
 	cur = stack->top;
 	while (cur)
 	{
