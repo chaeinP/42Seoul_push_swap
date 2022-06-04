@@ -78,5 +78,4 @@ void	ft_under_five(t_stack *stack_a, t_stack *stack_b)
 		if (stack_a->top->idx != 0)
 			ft_swap(stack_a, "sa\n");
 	}
-
 }
