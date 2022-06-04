@@ -26,9 +26,17 @@ void	ft_swap(t_stack *stack, char *name)
 	temp = stack->top->next;
 	top->prev = temp;
 	top->next = temp->next;
-	temp->prev = bottom;
-	temp->next->prev = top;
-	temp->next = top;
+	if (stack->length == 2)
+	{
+		temp->prev = top;
+		temp->next = top;
+	}
+	else
+	{
+		temp->prev = bottom;
+		temp->next->prev = top;
+		temp->next = top;
+	}
 	stack->top = temp;
 }
 
