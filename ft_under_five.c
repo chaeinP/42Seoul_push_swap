@@ -64,7 +64,8 @@ void	ft_under_five(t_stack *stack_a, t_stack *stack_b)
 	else if (stack_a->length == 4)
 	{
 		ft_push_0(stack_a, stack_b);
-		ft_sort_three(stack_a);
+		if (!ft_is_sorted(stack_a, 1))
+			ft_sort_three(stack_a);
 		ft_push(stack_b, stack_a, "pa\n");
 	}
 	else
